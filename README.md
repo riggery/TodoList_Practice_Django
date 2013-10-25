@@ -40,7 +40,7 @@ Look in [/TodoList/settings.py](https://github.com/riggery/TodoList_Practice_Dja
 
 ### ScreenShot
 
-
+[![solarized dualmode](https://raw.github.com/riggery/TodoList_Practice_Django/master/screenshot.png)](#features)
 
 ### Reference
 - Static web page design refer to Abiyasa Suhardi 'todotodo' 
