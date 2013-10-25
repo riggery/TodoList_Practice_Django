@@ -39,7 +39,7 @@ Look in [/TodoList/settings.py](https://github.com/riggery/TodoList_Practice_Dja
   Three data passing format(XML, JSON, Html) are used to receive response from add_item, delete_item, edit_item, get_list accordingly. So every time only update items are sent and updated instead passing all data. 
 
 ### ScreenShot
-
+![pic](https://github.com/riggery/TodoList_Practice_Django/blob/master/screenshot.png "Optional title")
 
 
 ### Reference
