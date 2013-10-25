@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>ToDo-List Practice</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/ajax.js"></script>
+    
+    <!-- Custom styles for this template -->
+    <link href="/static/css/index.css" rel="stylesheet">
+    <script>
+
+    </script>
+</head>
+<body>
+    <div id="todoapp">        
+        <div class="container">
+            <a style="float:right" role="menuitem" tabindex="-1" href="/todolist/logout">Logout</a>
+            <div class="row">
+                <div class="page-header">
+                    <h1>Todo List
+                    <small>Hey, {{username}}, GO GO</small></h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="add-todo" class="well">
+                    <input id="new-item" placeholder="Add things need to do ..." type="text" class="span8" />
+                    {% csrf_token %}
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="mark-all-done"></div>
+            </div>
+            
+            <div class="row">
+                <table id="todos" class="table table-bordered table-striped">
+                    <tbody id="todo-list">
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="row">
+                <div id="todo-stats">
+                   
+                </div>        
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+</html>

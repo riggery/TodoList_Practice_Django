@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>ToDo-List Practice</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/ajax.js"></script>
+    
+    <!-- Custom styles for this template -->
+    <link href="/static/css/index.css" rel="stylesheet">
+    <script>
+
+    </script>
+</head>
+<body>
+    
+<div id="todoapp">        
+    <div class="container">
+{% if form.errors %}
+<p style="color:red">
+Incorrect user name and password.
+</p>
+{% endif %}
+    <div class="row">
+       <div class="page-header">
+           <h1><small>Log in to see your todo list:</small></h1>
+       </div>
+    </div>
+     <div class="row">
+        <div id="log-in">
+           <form class="form-signin" method="post" action="{% url 'django.contrib.auth.views.login' %}">
+             
+                  <input style="margin-bottom: 15px;" type="username" name="username" class="input-block-level" id="username" value="{{username}}" placeholder="Username">
+                  <input type="password" name="password" class="input-block-level" id="password" placeholder="Password">
+                
+            
+            <input class="btn btn-primary" type="submit" value="Login" />
+            <a href="{% url 'register' %}">Register</a>
+            <input type="hidden" name="next" value="{{ next }}" />
+            {% csrf_token %}
+        </form>
+          
+        </div>
+    </div>
+    
+    
+
+    </div>
+</div>
+</body>
+</html>
+

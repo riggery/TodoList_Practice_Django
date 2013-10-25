@@ -1,0 +1,14 @@
+<td id="{{item.id}}">
+    <div class='show-item row-fluid'>
+        <span class="todo-content">{{item.text}}</span>
+        <div class='pull-right item-buttons'>
+            <span class='todo-edit' onclick='switchMode({{item.id}})'></span>
+            <span class='todo-destroy' onclick='sendDeleteRequest({{item.id}})'></span>
+        </div>
+    </div>
+    <div class='edit-item input-append hidden'>
+        <input id='edit{{item.id}}' type='text' class='todo-input input-medium' value='{{item.text}}' />
+        <button type='submit' class='btn' onclick='sendEditRequest({{item.id}})'>Create</button>
+    </div>
+    <div id="num" value="{{num}}" style="display: none;"></div>
+</td>

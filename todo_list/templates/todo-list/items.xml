@@ -1,0 +1,6 @@
+<items>{% for item in items reversed %}
+  <item>
+    <id>{{item.id}}</id>
+    <text>{{item}}</text>
+  </item>{% endfor %}
+</items>
